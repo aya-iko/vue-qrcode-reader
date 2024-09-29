@@ -29,7 +29,7 @@ const onChangeInput = (event: Event) => {
 
   for (const file of Array.from(event.target.files)) {
     processFile(file, props.formats).then((detectedCodes) => {
-      emit('detect', detectedCodes)
+      emit('detect', detectedCodes, file)
     })
   }
 }
